@@ -1,0 +1,842 @@
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver: 
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+proxies:
+- name: visa优选☯️
+  type: vless
+  server: visa.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: true
+  tls: false
+  network: ws
+  servername: xinlanjixie.18090015619.workers.dev
+  ws-opts:
+    path: "/?ed=2560 "
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFsg🇸🇬
+  type: vless
+  server: visa.com.sg
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFjp🇯🇵
+  type: vless
+  server: visa.co.jp
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFtw🇨🇳
+  type: vless
+  server: visa.com.tw
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFhk🇭🇰
+  type: vless
+  server: visa.com.hk
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFka🇰🇵
+  type: vless
+  server: visakorea.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFse🇨🇭
+  type: vless
+  server: visakorea.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFth🇹🇭
+  type: vless
+  server: visa.co.th
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFIPV6⚠️
+  type: vless
+  server: "[2606:4700::]"
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFuk🇬🇧
+  type: vless
+  server: visa.co.uk
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFusa🇺🇸
+  type: vless
+  server: usa.visa.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFvn🇻🇳
+  type: vless
+  server: visa.com.vn
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFae🇦🇪
+  type: vless
+  server: ae.visamiddleeast.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFtr🇹🇷
+  type: vless
+  server: visa.com.tr
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFru🇷🇺
+  type: vless
+  server: visa.com.ru
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFar🇦🇷
+  type: vless
+  server: visa.com.ar
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFau🇦🇺
+  type: vless
+  server: visa.com.au
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFkh🇰🇭
+  type: vless
+  server: visa.com.kh
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFca🇨🇦
+  type: vless
+  server: visa.ca
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFpl🇵🇱
+  type: vless
+  server: visa.pl
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFkm☠️
+  type: vless
+  server: caribbean.visa.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFcis☢️
+  type: vless
+  server: cis.visa.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFmx🇲🇽
+  type: vless
+  server: visa.com.mx
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFcn🇨🇳
+  type: vless
+  server: visa.cn
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFnf🇿🇦
+  type: vless
+  server: ica.visa.com
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFtime⏲️
+  type: vless
+  server: time.is
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFicooktw🍟
+  type: vless
+  server: icook.tw
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFcsgo🇬🇧
+  type: vless
+  server: csgo.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFcsgo🇷🇺
+  type: vless
+  server: ru.csgo.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFmly🇲🇾
+  type: vless
+  server: malaysia.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFsgp🇸🇬
+  type: vless
+  server: singapore.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFjpn🇯🇵
+  type: vless
+  server: japan.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFFBI🔫
+  type: vless
+  server: fbi.gov
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFicookhk🍔
+  type: vless
+  server: icook.hk
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFrussia🇷🇺
+  type: vless
+  server: russia.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFshopify🇺🇸
+  type: vless
+  server: shopify.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFLX🖥
+  type: vless
+  server: download.yunzhongzhuan.com
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFip👁
+  type: vless
+  server: ipaddress.my
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFktr🐫
+  type: vless
+  server: qa.visamiddleeast.com
+  port: 2095
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF🇺🇸172.67.145.62
+  type: vless
+  server: 172.67.145.62
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFipv61
+  type: vless
+  server: 2606:4700:99e6:50f0:a846:66c1:2b42:5c68
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF🇭🇰2606:4700:8390:4b38:a2ae:f0fd:264:c94d
+  type: vless
+  server: 2606:4700:8390:4b38:a2ae:f0fd:264:c94d
+  port: 8080
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF🇭🇰2606:4700:976b:ad9:6ffc:2347:9ee6:ab7e
+  type: vless
+  server: 2606:4700:976b:ad9:6ffc:2347:9ee6:ab7e
+  port: 2095
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFarip🇦🇷
+  type: vless
+  server: 162.159.153.2
+  port: 2095
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFcnip🇨🇳
+  type: vless
+  server: 162.159.152.2
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF🇺🇸2606:4700:9a9a:c845:7ffc:ce40:5752:c7ee
+  type: vless
+  server: 2606:4700:9a9a:c845:7ffc:ce40:5752:c7ee
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFFBI🇺🇸ip1
+  type: vless
+  server: 104.16.148.244
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF🇺🇸2606:4700:91b2:9751:a586:4c6c:9867:adaf
+  type: vless
+  server: 2606:4700:91b2:9751:a586:4c6c:9867:adaf
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CFFBI🇺🇸mail
+  type: vless
+  server: mail.fbi.gov
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF🇺🇸104.19.150.150
+  type: vless
+  server: 104.19.150.150
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF2606:4700:9a90:b4f7:8676:c669:3f1e:a4b1
+  type: vless
+  server: 2606:4700:9a90:b4f7:8676:c669:3f1e:a4b1
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF2606:4700:99e2:ad81:e1a5:d730:c60c:5df5
+  type: vless
+  server: 2606:4700:99e2:ad81:e1a5:d730:c60c:5df5
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF2606:4700:8caa:72e2:4b87:652c:808c:6fb0
+  type: vless
+  server: 2606:4700:8caa:72e2:4b87:652c:808c:6fb0
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+- name: CF2606:4700:9ad7:8f47:da0b:4a8b:3665:358
+  type: vless
+  server: 2606:4700:9ad7:8f47:da0b:4a8b:3665:358
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:90d7:294a:dcc0:8376:a70d:274f
+  type: vless
+  server: 2606:4700:90d7:294a:dcc0:8376:a70d:274f
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:90c2:ec44:d3f:aa0b:3117:d144
+  type: vless
+  server: 2606:4700:90c2:ec44:d3f:aa0b:3117:d144
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:8394:b917:b97f:e900:684f:10f2
+  type: vless
+  server: 2606:4700:8394:b917:b97f:e900:684f:10f2
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:9a60:1a51:e944:1fe8:53ef:8159
+  type: vless
+  server: 2606:4700:9a60:1a51:e944:1fe8:53ef:8159
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:9645:b9c8:4926:ca5a:3734:5c96
+  type: vless
+  server: 2606:4700:9645:b9c8:4926:ca5a:3734:5c96
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:90d4:a41e:e0eb:3868:1250:8077
+  type: vless
+  server: 2606:4700:90d4:a41e:e0eb:3868:1250:8077
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:91b6:ea23:bb1d:f0ee:ae68:72dd
+  type: vless
+  server: 2606:4700:91b6:ea23:bb1d:f0ee:ae68:72dd
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev 
+- name: CF2606:4700:9a93:f8b:e62c:1de6:8b4f:4d98
+  type: vless
+  server: 2606:4700:9ae6:8086:d3d3:ea24:df7d:2803
+  port: 8880
+  uuid: 07ff7c97-ebd3-429f-8b29-359caa21ca6b
+  udp: false
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: xinlanjixie.18090015619.workers.dev
+proxy-groups:
+- name: 手动选择节点1▶️
+  type: select
+  proxies:
+    - CFsg🇸🇬
+    - CFjp🇯🇵
+    - CFtw🇨🇳
+    - CFhk🇭🇰
+    - CFka🇰🇵
+    - CFse🇨🇭
+    - CFth🇹🇭
+    - CFIPV6⚠️
+    - CFuk🇬🇧
+    - CFusa🇺🇸
+    - CFvn🇻🇳
+    - CFae🇦🇪
+    - CFtr🇹🇷
+    - CFru🇷🇺
+    - CFar🇦🇷
+    - CFau🇦🇺
+    - CFkh🇰🇭
+    - CFca🇨🇦
+    - CFpl🇵🇱
+    - CFkm☠️
+    - CFcis☢️
+    - CFmx🇲🇽
+    - CFcn🇨🇳
+    - CFnf🇿🇦
+    - visa优选☯️
+    - CFtime⏲️
+    - CFicooktw🍟
+    - CFcsgo🇬🇧
+    - CFcsgo🇷🇺
+    - CFjpn🇯🇵
+    - CFsgp🇸🇬
+    - CFmly🇲🇾
+    - CFicookhk🍔
+    - CFFBI🔫
+    - CFshopify🇺🇸
+    - CFrussia🇷🇺
+    - CFLX🖥
+    - CFip👁
+    - CFktr🐫
+    - CF🇺🇸172.67.145.62
+    - CFipv61
+    - CF🇭🇰2606:4700:8390:4b38:a2ae:f0fd:264:c94d
+    - CF🇭🇰2606:4700:976b:ad9:6ffc:2347:9ee6:ab7e
+    - CFarip🇦🇷
+    - CFcnip🇨🇳
+    - CF🇺🇸2606:4700:9a9a:c845:7ffc:ce40:5752:c7ee
+    - CFFBI🇺🇸mail
+    - CFFBI🇺🇸ip1
+    - CF🇺🇸2606:4700:91b2:9751:a586:4c6c:9867:adaf
+    - CF🇺🇸104.19.150.150
+    - CF2606:4700:9a90:b4f7:8676:c669:3f1e:a4b1
+    - CF2606:4700:99e2:ad81:e1a5:d730:c60c:5df5
+    - CF2606:4700:8caa:72e2:4b87:652c:808c:6fb0
+    - CF2606:4700:9ad7:8f47:da0b:4a8b:3665:358
+    - CF2606:4700:90d7:294a:dcc0:8376:a70d:274f
+    - CF2606:4700:90c2:ec44:d3f:aa0b:3117:d144
+    - CF2606:4700:8394:b917:b97f:e900:684f:10f2
+    - CF2606:4700:9a60:1a51:e944:1fe8:53ef:8159
+    - CF2606:4700:9645:b9c8:4926:ca5a:3734:5c96
+    - CF2606:4700:90d4:a41e:e0eb:3868:1250:8077
+    - CF2606:4700:91b6:ea23:bb1d:f0ee:ae68:72dd
+    - CF2606:4700:9a93:f8b:e62c:1de6:8b4f:4d98
+rules:
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,手动选择节点1▶️
